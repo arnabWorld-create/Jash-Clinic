@@ -1,0 +1,28 @@
+{
+  "name": "jash-site",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "check:confirm": "node scripts/check-confirm.mjs",
+    "prelaunch": "npm run lint:copy && npm run check:seo && npm run check:articles && npm run build && npm run check:confirm",
+    "lint:copy": "node scripts/lint-copy.mjs",
+    "check:articles": "node scripts/check-articles.mjs",
+    "check:seo": "node scripts/check-seo.mjs"
+  },
+  "dependencies": {
+    "next": "^15.1.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "gsap": "^3.12.5",
+    "lenis": "^1.1.13",
+    "gray-matter": "^4.0.3"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@types/node": "^22.0.0"
+  }
+}

@@ -1,0 +1,14 @@
+{ "nav": { "about": "About", "services": "Services", "why": "Why Choose Us", "facilities": "Facilities", "guide": "Health Guide", "faq": "FAQ", "contact": "Contact" },
+  "cta": { "book": "Book appointment", "bookShort": "Book", "whatsapp": "Book on WhatsApp", "call": "Call", "callShort": "Call", "urgent": "Urgent injury? Call during OPD hours", "urgentShort": "Urgent", "severe": "For severe injury, go to the nearest hospital emergency department." },
+  "info": { "address": "Address", "opd": "OPD", "maps": "Open in Google Maps" },
+  "home": { "eyebrow": "Orthopaedic care in Ahmedabad · since 1992", "h1a": "Your bones,", "h1b": "in", "h1c": "careful", "h1d": "hands.",
+    "lead": "Dr. Piyush Shah, MS Orthopaedics, has treated fractures, joints and spine problems in Ahmedabad since 1988. Straight advice, plain language and personal attention at every step of your treatment.",
+    "answer": "Dr. Piyush Shah is an orthopaedic surgeon in Ahmedabad. He has been in clinical practice since 1988. He completed his MS in Orthopaedics in 1988 and trained under Late Dr. K.M. Shah. In 1992 he founded Jash Fracture & Orthopaedic Hospital.",
+    "meet": "Meet Dr. Shah", "treat": "What we treat", "practising": "Practising since",
+    "statsA": "Since 1988", "statsAl": "Clinical practice", "statsB": "Since 1992", "statsBl": "The hospital",
+    "ctaA": "Pain that won't settle?", "ctaB": "Let's look at it.",
+    "journey": [
+      { "y": "1988", "h": "MS Orthopaedics, V.S. Hospital", "p": "Dr. Shah completes his MBBS and MS in Orthopaedics in Ahmedabad, then trains under Late Dr. K.M. Shah until 1992." },
+      { "y": "1992", "h": "Jash Fracture & Orthopaedic Hospital opens", "p": "He founds his own hospital in Ahmedabad, built around personal care for bone and joint problems." },
+      { "y": "Today", "h": "Practising today", "p": "Fractures, joints, spine and sports injuries, with personal attention at every step of your treatment." } ] },
+  "disclaimer": "This website gives general information and is not a substitute for medical advice. Outcomes vary from patient to patient and there is no guarantee of any particular result. In an emergency, go to the nearest hospital." }
