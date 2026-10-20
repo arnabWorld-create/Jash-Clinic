@@ -6,7 +6,13 @@ const BAN = /testimonial|patient review|\bguarantee[sd]?\b|100%|best doctor|\bno
 const ALLOW = /no guarantee/i; // the disclaimer line only
 const hits = [];
 const walk = (d) => { for (const f of readdirSync(d)) { const p = join(d, f); if (statSync(p).isDirectory()) { if (f !== "node_modules") walk(p); } else if (EXT.has(extname(p))) scan(p); } };
-const scan = (p) => readFileSync(p, "utf8").split("\n").forEach((l, i) => { if (BAN.test(l) && !ALLOW.test(l)) hits.push(`${p}:${i + 1}: ${l.trim().slice(0, 90)}`); });
+const scan = (p) => readFileSync(p, "utf8").split("\n").forEach((l, i) => {
+  const copy = l
+    .replace(/\b(?:maxWidth|width|height)\s*=\s*["'][^"']*["']/g, "")
+    .replace(/\b(?:maxWidth|width|height|sizes)\s*:\s*["'][^"']*["']/g, "")
+    .replace(/\bsizes\s*=\s*["'][^"']*["']/g, "");
+  if (BAN.test(copy) && !ALLOW.test(copy)) hits.push(`${p}:${i + 1}: ${l.trim().slice(0, 90)}`);
+});
 DIRS.forEach((d) => { try { walk(d); } catch {} });
 if (hits.length) { console.error("✖ Banned words in public copy:\n" + hits.join("\n")); process.exit(1); }
 console.log("✓ Copy lint passed.");

@@ -10,7 +10,6 @@ import InfoRow from "@/components/InfoRow";
 import Sec from "@/components/Sec";
 import ServiceList from "@/components/ServiceList";
 import BookBar from "@/components/BookBar";
-import portrait from "@/assets/dr-shah.jpg";
 
 export const revalidate = 31536000; // yearly; must be a literal for Next.js
 type P = { params: Promise<{ locale: Locale }> };
@@ -33,7 +32,7 @@ export default async function Home({ params }: P) {
         </div>
         <div className="pf">
           <div className="pw" style={{ aspectRatio: "4/5", borderRadius: "999px 999px 0 0" }}>
-            <Image src={portrait} alt="Dr. Piyush Shah, orthopaedic surgeon, in a white coat" priority placeholder="blur" sizes="(min-width:768px) 33vw, 90vw" style={{ objectPosition: "50% 30%" }} />
+            <Image className="hero-portrait" src="/Doctor.png" alt="Dr. Piyush Shah, orthopaedic surgeon, in his consultation room" width={1086} height={1448} priority sizes="(min-width:768px) 40vw, 90vw" style={{ objectPosition: "50% 40%" }} />
           </div>
           <div className="badge d"><small style={{ fontFamily: "var(--f-text)" }}>{h.practising}</small><b>1988</b></div>
         </div>

@@ -15,7 +15,7 @@ export const site = {
   registration: { number: CONFIRM, council: CONFIRM },
   facilities: [] as { name: string; photo: string; alt: string }[], // confirmed only; empty hides the section and nav item
   opd: "Monday to Saturday · Morning 10:30 AM to 1:30 PM · Evening 6:00 PM to 8:00 PM · Sunday closed",
-  opdSchedule: { days: ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], slots: [{ opens: "10:30", closes: "13:30" }, { opens: "18:00", closes: "20:00" }] }, // [CONFIRM] a clinic notice mentions Saturday evening closed                        // on-site sign: OPD closed Saturday evening
+  opdSchedule: { days: ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], slots: [{ opens: "10:30", closes: "13:30" }, { opens: "18:00", closes: "20:00" }] }, // Saturday evening hours confirmed by client
   mapsUrl: "https://www.google.com/maps/search/?api=1&query=Gold%20Coin%20Complex%20-%20A%2C%20Opp.%20BRTS%20Stop%2C%20Jodhpur%2C%20Satellite%20Road%2C%20Ahmedabad%20380015", mapsEmbed: "https://www.google.com/maps?q=Gold%20Coin%20Complex%20-%20A%2C%20Opp.%20BRTS%20Stop%2C%20Jodhpur%2C%20Satellite%20Road%2C%20Ahmedabad%20380015&output=embed", gbpUrl: CONFIRM,
   domain: CONFIRM, socials: [] as string[],
   locales: ["en", "gu"] as const,

@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import logo from "@/assets/logo.png";
 import { site } from "@/config/site";
 import { href } from "@/lib/i18n";
 import { addressLine } from "@/lib/links";
@@ -11,7 +10,7 @@ export default function Footer({ locale, disclaimer, showGuide }: { locale: Loca
   return (
     <footer className="ft"><div className="w">
       <div className="brand" style={{ marginBottom: 4 }}>
-        <span style={{ background: "var(--paper)", borderRadius: 14, padding: "6px 8px", display: "grid", placeItems: "center" }}><Image src={logo} alt="Jash Fracture & Orthopaedic Hospital logo" width={44} height={52} style={{ height: 52, width: "auto" }} /></span>
+        <span style={{ background: "var(--paper)", borderRadius: 14, padding: "6px 8px", display: "grid", placeItems: "center" }}><Image src="/New%20Logo.png" alt="Jash Fracture & Orthopaedic Hospital logo" width={52} height={52} style={{ width: 52, height: 52, objectFit: "contain" }} /></span>
         <span className="bt"><b className="d" style={{ fontSize: "2rem" }}>Jash</b><small>Fracture &amp; Orthopaedic Hospital</small></span>
       </div>
       <address style={{ marginTop: 12, fontStyle: "normal" }}>{addressLine}<br />Phone: <a href={`tel:${site.phone}`}>{site.phoneDisplay}</a> · WhatsApp: <a href={`https://wa.me/${site.whatsapp}`}>{site.whatsapp.slice(2)}</a> · <a href={`mailto:${site.email}`}>{site.email}</a><br />OPD: {site.opd}<br />Since {site.FOUNDED}</address>

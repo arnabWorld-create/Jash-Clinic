@@ -3,7 +3,6 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import logo from "@/assets/logo.png";
 
 type Props = { locale: "en" | "gu"; nav: { href: string; label: string; key: string }[]; book: { href: string; label: string } | null };
 
@@ -67,7 +66,7 @@ export default function Header({ locale, nav, book }: Props) {
       <header ref={hd} className={`hd${hidden ? " hide" : ""}${scrolled ? " sc" : ""}`}>
         <div className="hi pad w">
           <Link className="brand" href={locale === "gu" ? "/gu" : "/"} aria-label="Jash Fracture & Orthopaedic Hospital, home">
-            <Image src={logo} alt="" width={37} height={44} priority style={{ height: 44, width: "auto" }} />
+            <Image src="/New%20Logo.png" alt="" width={44} height={44} priority style={{ width: 44, height: 44, objectFit: "contain" }} />
             <span className="bt"><b className="d">Jash</b><small>Fracture &amp; Orthopaedic Hospital</small></span>
           </Link>
           <nav className="nv" aria-label="Main">{links}</nav>

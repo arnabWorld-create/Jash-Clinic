@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import seo from "@/config/seo.json";
+import seoGu from "@/config/seo-gu.json";
 import { site, baseUrl, type Locale } from "@/config/site";
 import { href, GU_PAGES } from "@/lib/i18n";
 type Key = keyof typeof seo;
 // One call per page: unique title/description, canonical, hreflang (en/gu/x-default), OpenGraph, Twitter.
 export function pageMeta(key: Key, path: string, locale: Locale = "en"): Metadata {
-  const m = seo[key];
+  const m = locale === "gu" && GU_PAGES.includes(path) && key in seoGu ? seoGu[key as keyof typeof seoGu] : seo[key];
   const url = baseUrl + href(locale, path);
   const gu = GU_PAGES.includes(path);
   return {

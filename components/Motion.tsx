@@ -37,12 +37,14 @@ export default function Motion() {
           if (el.closest("[data-j]")) return;
           gsap.from(el, { y: 30, opacity: 0, duration: 0.75, ease: "power3.out", scrollTrigger: { trigger: el, start: "top 92%", once: true } });
         });
-        gsap.utils.toArray<HTMLElement>(".pw img,.cw img").forEach((im) => gsap.fromTo(im, { yPercent: -5, scale: 1.14 }, { yPercent: 5, scale: 1.14, ease: "none", scrollTrigger: { trigger: im.parentElement!, scrub: true } }));
+        gsap.utils.toArray<HTMLElement>(".pw img:not(.hero-portrait),.cw img").forEach((im) => gsap.fromTo(im, { yPercent: -5, scale: 1.14 }, { yPercent: 5, scale: 1.14, ease: "none", scrollTrigger: { trigger: im.parentElement!, scrub: true } }));
       });
       mm.add("(max-width: 767px)", () => {
+        gsap.utils.toArray<HTMLElement>(".hero-portrait").forEach((im) => gsap.fromTo(im, { yPercent: -5, scale: 1.18 }, { yPercent: 5, scale: 1.18, ease: "none", scrollTrigger: { trigger: im.parentElement!, scrub: true } }));
         gsap.utils.toArray<HTMLElement>("[data-st]").forEach((st) => gsap.from(Array.from(st.children), { y: 36, opacity: 0, stagger: 0.12, duration: 0.8, ease: "power3.out", scrollTrigger: { trigger: st, start: "top 88%", once: true } }));
       });
       mm.add("(min-width: 768px)", () => {
+        gsap.utils.toArray<HTMLElement>(".hero-portrait").forEach((im) => gsap.fromTo(im, { yPercent: -5, scale: 1.22 }, { yPercent: 5, scale: 1.22, ease: "none", scrollTrigger: { trigger: im.parentElement!, scrub: true } }));
         const j = document.querySelector("[data-j]");
         if (!j) return;
         const s = gsap.utils.toArray<HTMLElement>("[data-st]");
