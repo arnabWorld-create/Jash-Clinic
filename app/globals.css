@@ -18,7 +18,7 @@ main{padding-top:calc(64px + env(safe-area-inset-top));animation:in .5s}@keyfram
 .btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
 .eb{font-weight:600;font-size:14px;letter-spacing:.06em;text-transform:uppercase}
 h1.d{font-size:clamp(2.8rem,9vw,7.5rem);margin-top:16px}h2.d{font-size:clamp(2rem,5.5vw,4.5rem)}h3.d{font-size:clamp(1.5rem,3vw,2.2rem);line-height:1.05}
-main[lang="gu"] .hero h1.d{font-size:clamp(2.8rem,6vw,5rem)}
+main[lang="gu"] .hero h1.d{font-family:var(--f-gu),sans-serif;font-size:clamp(2.8rem,6vw,5rem);letter-spacing:normal;line-height:1.25}
 .sec{padding:80px 20px}.lead{font-size:19px;color:var(--ink2);max-width:40rem;margin-top:20px}
 .bc{font-size:14px;color:var(--ink2);padding-top:24px}.bc a{text-decoration:none}
 .hero{display:grid;gap:24px;padding-top:32px;min-height:84svh}.pf{position:relative;align-self:end}.pw{aspect-ratio:4/5;overflow:hidden;border-radius:999px 999px 0 0;background:var(--line)}.hero .pw img.hero-portrait{transform:scale(1.18)}

@@ -13,7 +13,6 @@ import ServiceList from "@/components/ServiceList";
 import ContactBlock from "@/components/ContactBlock";
 import CertGallery from "@/components/CertGallery";
 import { default as Cta } from "@/components/Cta";
-import portrait from "@/assets/dr-shah.jpg";
 export const revalidate = 31536000; // yearly; must be a literal for Next.js
 type P = { params: Promise<{ locale: Locale }> };
 export async function generateMetadata({ params }: P): Promise<Metadata> { return pageMeta("about", "/about", (await params).locale); }
@@ -27,7 +26,7 @@ export default async function About({ params }: P) {
     <main id="main" lang={locale === "gu" ? "en" : locale}>
       <Breadcrumb items={[["Home", href(locale, "/")], [d.nav.about, href(locale, "/about")]]} />
       <Sec><div className="two"><div><p className="eb">About</p><h1 className="d">Dr. Piyush Shah</h1><p className="lead">MBBS, MS (Orthopaedics). In clinical practice since 1988; founder of Jash Fracture &amp; Orthopaedic Hospital, Ahmedabad.</p><Cta d={d} urgent={false} />{reg && <p className="lead" style={{ marginTop: 12 }}>Medical registration: {reg}</p>}</div>
-        <div className="pw" style={{ aspectRatio: "4/5", borderRadius: 24 }}><Image src={portrait} alt="Dr. Piyush Shah, orthopaedic surgeon, in his consultation room" placeholder="blur" sizes="(min-width:768px) 40vw, 90vw" style={{ objectPosition: "50% 30%" }} /></div></div></Sec>
+        <div className="pw" style={{ aspectRatio: "4/5", borderRadius: 24 }}><Image src="/Doctor.png" alt="Dr. Piyush Shah, orthopaedic surgeon, in his consultation room" width={1086} height={1448} sizes="(min-width:768px) 40vw, 90vw" style={{ objectPosition: "50% 30%" }} /></div></div></Sec>
       <Sec><div className="two" style={{ alignItems: "start" }}><h2 className="d">The story so far</h2><div style={{ fontSize: 19, color: "var(--ink2)", display: "grid", gap: 18 }}>
         <p>Dr. Piyush Shah is an orthopaedic surgeon in Ahmedabad. He completed his MBBS and then his MS in Orthopaedics at V.S. Hospital, finishing in 1988.</p>
         <p>He spent the next four years, from 1988 to 1992, training and working under Late Dr. K.M. Shah.</p>
